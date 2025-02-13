@@ -16,7 +16,7 @@ public class ManageEmployee {
       try {
          factory = new Configuration().configure().buildSessionFactory();
       } catch (Throwable ex) { 
-         System.err.println("Failed to create sessionFactory object:: " + ex);
+         System.err.println("Failed to create sessionFactory object::: " + ex);
          throw new ExceptionInInitializerError(ex); 
       }
       
@@ -48,7 +48,7 @@ public class ManageEmployee {
 
       try {
          tx = session.beginTransaction();
-         Employee employee = new Employee(fname, lname, salary);  // ✅ Corrected entity class reference
+         Employee employee = new Employee(fname, lname, salary);  // Corrected entity class reference
          employeeID = (Integer) session.save(employee); 
          tx.commit();
       } catch (HibernateException e) {
@@ -67,7 +67,7 @@ public class ManageEmployee {
 
       try {
          tx = session.beginTransaction();
-         List<Employee> employees = session.createQuery("FROM Employee", Employee.class).list(); // ✅ Corrected query
+         List<Employee> employees = session.createQuery("FROM Employee", Employee.class).list(); // Corrected query
          for (Employee employee : employees) {
             System.out.print("First Name: " + employee.getFirstName()); 
             System.out.print("  Last Name: " + employee.getLastName()); 
@@ -89,7 +89,7 @@ public class ManageEmployee {
 
       try {
          tx = session.beginTransaction();
-         Employee employee = session.get(Employee.class, EmployeeID); // ✅ Corrected entity class reference
+         Employee employee = session.get(Employee.class, EmployeeID); //  Corrected entity class reference
          if (employee != null) {
             employee.setSalary(salary);
             session.update(employee); 
@@ -112,7 +112,7 @@ public class ManageEmployee {
 
       try {
          tx = session.beginTransaction();
-         Employee employee = session.get(Employee.class, EmployeeID); // ✅ Corrected entity class reference
+         Employee employee = session.get(Employee.class, EmployeeID); // Corrected entity class reference.
          if (employee != null) {
             session.delete(employee); 
             tx.commit();
