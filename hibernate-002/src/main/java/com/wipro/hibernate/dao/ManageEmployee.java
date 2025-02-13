@@ -1,6 +1,6 @@
-package com.wipro.hibernate.dao;  // ✅ Ensure the correct package is used
+package com.wipro.hibernate.dao;  
 
-import com.wipro.hibernate.entities.Employee;  // ✅ Correct import
+import com.wipro.hibernate.entities.Employee;  
 import org.hibernate.HibernateException; 
 import org.hibernate.Session; 
 import org.hibernate.Transaction;
