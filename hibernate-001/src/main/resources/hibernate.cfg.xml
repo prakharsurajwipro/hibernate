@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate Configuration DTD 3.0//EN"
+   "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Automatically create tables based on entity mappings -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Updated to correct dialect for Hibernate 6.x -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Use the correct MySQL JDBC Driver -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Correct Database Connection Details -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/demo</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">suraj</property>
+
+        <!-- Corrected Mapping file path -->
+      <mapping resource="Employee.hbm.xml"/>
+      
+    </session-factory>
+</hibernate-configuration>
