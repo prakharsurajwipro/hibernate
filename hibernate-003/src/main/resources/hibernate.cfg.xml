@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate Configuration DTD 3.0//EN"
+   "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Automatically update tables based on entity mappings -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Correct dialect for Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Use the correct MySQL JDBC Driver -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Database Connection Details -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/demo1</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">suraj</property>
+
+        <!-- XML Mapping for Employee -->
+        <mapping resource="Student.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wipro.java.hibernate</groupId>
-    <artifactId>hibernate-002</artifactId>
+    <artifactId>hibernate-004</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>hibernate-001</name>
