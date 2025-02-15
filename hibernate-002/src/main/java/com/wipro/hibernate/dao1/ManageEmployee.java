@@ -68,7 +68,7 @@ public class ManageEmployee {
 
         try {
             tx = session.beginTransaction();
-            List<Employee> employees = session.createQuery("FROM Employee", Employee.class).list();
+            List<Employee> employees = session.createQuery("FROM Employee ", Employee.class).list();
             for (Employee employee : employees) {
                 System.out.print("First Name: " + employee.getFirstName());
                 System.out.print("  Last Name: " + employee.getLastName());
