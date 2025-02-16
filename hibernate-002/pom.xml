@@ -23,7 +23,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <!--  Spring Boot Dependency Management -->
+            <!--  Spring Boot Dependency Management. -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
